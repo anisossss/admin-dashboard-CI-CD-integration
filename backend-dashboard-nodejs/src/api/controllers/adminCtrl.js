@@ -24,7 +24,6 @@ const adminCtrl = {
       });
     }
   },
-  // name email subscriptionStatus
   accounts: async (req, res, next) => {
     try {
       const users = await Users.find().select(

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backapp-deployment
+  labels:
+    app: backapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: backapp
+  template:
+    metadata:
+      labels:
+        app: backapp
+    spec:
+      containers:
+      - name: backapp
+        image: anisossss/backend-dashboard-nodejs
+        ports:
+        - containerPort: 80
