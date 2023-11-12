@@ -1,7 +1,11 @@
-# ADMIN DASHBOARD: Continuous Integration and Deployment Pipeline
+# BACKEND ADMIN DASHBOARD: Continuous Integration and Deployment Pipeline
+# FRONTEND ADMIN DASHBOARD
 
-## Tools
-Github, Docker, Jenkins, and Kubernetes.
+## TECHS & TOOLS
+
+- NextJS, NodeJS, ExpressJS, MongoDB
+
+- Github, Docker, Jenkins, Kubernetes
 
 ## Table of Contents
 
