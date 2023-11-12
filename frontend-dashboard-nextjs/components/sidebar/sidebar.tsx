@@ -29,7 +29,7 @@ export const SidebarWrapper = () => {
       {collapsed ? <Sidebar.Overlay onClick={setCollapsed} /> : null}
       <Sidebar collapsed={collapsed}>
         <Image
-          src={"/logo/logo_footer.svg"}
+          src={"/logo/logo.png"}
           width={70}
           height={70}
           alt=""
