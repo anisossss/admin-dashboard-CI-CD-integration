@@ -10,9 +10,8 @@ pipeline {
         stage('Checkout'){
             agent any
             steps {
-                sh 'rm -rf backend-dashboard-nodejs'
+                sh 'rm -rf admin-dashboard-CI-CD-integration'
                 sh 'git clone -b main https://github.com/anisossss/admin-dashboard-CI-CD-integration.git'
-                sh 'cd backend-dashboard-nodejs'
             }
         }
         stage('Init'){
@@ -22,17 +21,17 @@ pipeline {
         }
         stage('Build'){
             steps {
-                sh 'docker build -t anisossss/backend-dashboard-nodejs:$BUILD_ID backend-dashboard-nodejs/. '
+                sh 'docker build -t anisossss/admin-dashboard-CI-CD-integration:$BUILD_ID admin-dashboard-CI-CD-integration/. '
             }
         }
         stage('Deliver'){
             steps {
-                sh 'docker push anisossss/backend-dashboard-nodejs:$BUILD_ID'
+                sh 'docker push anisossss/admin-dashboard-CI-CD-integration:$BUILD_ID'
             }
         }
         stage('Cleanup'){
             steps {
-                sh 'docker rmi anisossss/backend-dashboard-nodejs:$BUILD_ID'
+                sh 'docker rmi anisossss/admin-dashboard-CI-CD-integration:$BUILD_ID'
                 sh 'docker logout'
             }
         }

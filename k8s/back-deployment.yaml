@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backapp-deployment
+  name: dashboardback-deployment
   labels:
-    app: backapp
+    app: dashboardback
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: backapp
+      app: dashboardback
   template:
     metadata:
       labels:
-        app: backapp
+        app: dashboardback
     spec:
       containers:
-      - name: backapp
-        image: anisossss/backend-dashboard-nodejs
+      - name: dashboardback
+        image: anisossss/admin-dashboard-CI-CD-integration
         ports:
         - containerPort: 80
